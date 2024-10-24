@@ -1,4 +1,5 @@
 
+import FAQ from '@/components/FAQ'
 import Image from 'next/image'
 
 
@@ -86,7 +87,7 @@ function MintVilla() {
 
     <h1 className=' text-4xl md:text-6xl basis-1/2 max-w-[600px] mb-5 font-headingFont font-medium italic'>All villas have a unique theme because we want our every guest to feel special.</h1>
 
-    <p className='basis-1/2 max-w-[300px] text-sm mb-5'>Our spacious 3-bedroom villa, which can accommodate up to 8 guests, features a private Jacuzzi pool and is nestled in a peaceful neighbourhood, offering a serene getaway. </p>
+    <p className='basis-1/2 max-w-[300px] font-bodyFont text-sm mb-5'>Our spacious 3-bedroom villa, which can accommodate up to 8 guests, features a private Jacuzzi pool and is nestled in a peaceful neighbourhood, offering a serene getaway. </p>
 
 
 
@@ -134,7 +135,7 @@ function MintVilla() {
     {rooms.map((room)=>(
       <div className='room-row py-5 sm:py-10' key={room.title}>
       
-      <h2 className='font-headingFont text-3xl mb-5'>{room.title}/{room.bed} bed {room.additions? `.${room.additions}` : ''}</h2>
+      <h2 className='font-headingFont text-3xl mb-5'>{room.title} / {room.bed} bed {room.additions? `• ${room.additions}` : ''}</h2>
 
       <div className='sm:grid gap-5 sm:grid-cols-3'>
          {room.roomImages.map((roomImage,index)=>(
@@ -170,6 +171,21 @@ function MintVilla() {
 
 
 
+    </section>
+
+    <section>
+    <div className='max-w-screen-xl m-auto'>
+       <div className="border-solid border-[1px] gap-5 border-black flex justify-center rounded-full items-center mb-5  w-fit py-1 px-8">
+              <Image alt="star" width={31} height={31} src="/star-icon.svg"/>
+              <h3 className="font-headingFont sm:text-2xl">We&apos;re Here To Help</h3>
+            </div>
+            <h1 className='text-5xl italic font-headingFont'>
+              Your Questions,<br />
+Perfectly Answered.
+            </h1>
+            <FAQ/>
+    </div>
+      
     </section>
 
 

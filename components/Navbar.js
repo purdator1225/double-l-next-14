@@ -32,10 +32,11 @@ function Navbar() {
   return (
     <nav className="absolute top-0 px-5 py-5 z-20 flex justify-between w-full items-center font-bodyFont text-white ">
         <div className=""><Link className="" href='/'>Browse Villas</Link></div>
-        <div className="w-fit ">
-             <DoubleLLogo fill='white' />
+        <div className="w-fit">
+        <Link href={'/'}> <DoubleLLogo fill='white' /></Link>
+            
         </div>
-        <div className=""><Link href={"/"}>Contact Us</Link></div>
+        <div className=""><Link href={"/book"}>Book Now</Link></div>
        
     </nav>
     

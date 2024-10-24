@@ -5,6 +5,10 @@ import { motion } from "framer-motion";
 import VillaSlider from "@/components/VillaSlider";
 import MediaSlider from "@/components/MediaSlider";
 
+import Head from 'next/head';
+
+import Script from "next/script";
+
 
 const amenities = [
   { title: "Free Wifi Access", img: "/amenities/wifi.svg" },
@@ -31,6 +35,12 @@ export default function Home() {
 
 
       <h1 className="font-headingFont text-3xl text-center z-30 text-llcream md:text-5xl m-auto">An intimate stay crafted by passionate travellers.</h1>
+
+      <div id="block-search">
+  <div id="be-search-form" className="be-container">
+    <a href="https://exely.com/" rel="nofollow" target="_blank">Hotel management software</a>
+  </div>
+</div>
 
        <div className="w-[50px] h-[50px] absolute z-10 bottom-[20%]">
           <Image alt="logo" width={100} height={100} src="/logo.svg" />

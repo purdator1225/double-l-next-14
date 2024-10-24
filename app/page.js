@@ -5,10 +5,6 @@ import { motion } from "framer-motion";
 import VillaSlider from "@/components/VillaSlider";
 import MediaSlider from "@/components/MediaSlider";
 
-import Head from 'next/head';
-
-import Script from "next/script";
-
 
 const amenities = [
   { title: "Free Wifi Access", img: "/amenities/wifi.svg" },

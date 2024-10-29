@@ -98,7 +98,7 @@ export default function Home() {
 
       </section>
 
-          <section className="villa-slider-section  bg-gradient-to-b from-white to-llbeige py-10 md:py-14 xl:py-20">
+          <section className="villa-slider-section  bg-gradient-to-b from-white to-llcream py-10 md:py-14 xl:py-20">
 
         <div className="max-w-screen-xl m-auto px-5">
           <h1 className="text-5xl md:text-6xl font-headingFont mb-5">Our Villas</h1>
@@ -137,7 +137,7 @@ export default function Home() {
 
         </section>
 
-        <section className="villa-slider-section  bg-gradient-to-b from-white to-llbeige py-10 md:py-14 xl:py-20 px-5">
+        <section className="villa-slider-section  bg-gradient-to-b from-white to-llcream py-10 md:py-14 xl:py-20 px-5">
 
         <div className="max-w-screen-xl m-auto">
 

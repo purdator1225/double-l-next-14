@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import VillaSlider from "@/components/VillaSlider";
 import MediaSlider from "@/components/MediaSlider";
+import BeSearchForm from "../components/be-forms/be-search-form";
 
 
 const amenities = [
@@ -24,7 +25,7 @@ export default function Home() {
   return (
     <main className="font-bodyFont">
 
-      <section className="hero-section relative z-10 flex flex-col items-center bg-hero-bg bg-cover bg-center min-h-[90vh]">
+      <section className="hero-section relative z-10 flex flex-col items-center bg-hero-bg bg-cover bg-center min-h-[90vh] pt-[150px] pb-[320px]">
 
        <div className="absolute inset-0 bg-black opacity-30 z-10"></div>
 
@@ -32,17 +33,11 @@ export default function Home() {
 
       <h1 className="font-headingFont text-3xl text-center z-30 text-llcream md:text-5xl m-auto">An intimate stay crafted by passionate travellers.</h1>
 
-      <div id="block-search">
-  <div id="be-search-form" className="be-container">
-    <a href="https://exely.com/" rel="nofollow" target="_blank">Hotel management software</a>
-  </div>
-</div>
-
-       <div className="w-[50px] h-[50px] absolute z-10 bottom-[20%]">
+       <div className="w-[50px] h-[50px] absolute z-10 bottom-[215px]">
           <Image alt="logo" width={100} height={100} src="/logo.svg" />
         </div>
 
-          <div className="absolute bottom-0 z-10 translate-y-[50%]">
+          <div className="absolute bottom-0 z-10">
            <div className="arrow flex flex-col justify-center items-center">
             <motion.div
               initial={{ y: [0] }}
@@ -79,6 +74,8 @@ export default function Home() {
 
 
       </section>
+
+      <BeSearchForm/>
 
       <section className="about-us px-5  py-10 sm:py-14 xl:py-20">
               

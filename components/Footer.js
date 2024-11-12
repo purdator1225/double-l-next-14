@@ -25,7 +25,7 @@ function Footer() {
 
        <div className='md:m-auto'><h2 className='font-headingFont text-3xl mb-5'>Social</h2>
        <div className='flex flex-col'>
-              <Link href={'/'}>TIKTOK</Link>
+              <Link href={'https://www.tiktok.com/@double.l.villa'}>TIKTOK</Link>
        <Link href={'/'}>INSTAGRAM</Link>
        <Link href={'/'}>FACEBOOK</Link>
        </div>

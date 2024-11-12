@@ -5,18 +5,8 @@ import { motion } from "framer-motion";
 import VillaSlider from "@/components/VillaSlider";
 import MediaSlider from "@/components/MediaSlider";
 import BeSearchForm from "../components/be-forms/be-search-form";
+import Link from "next/link";
 
-
-const amenities = [
-  { title: "Free Wifi Access", img: "/amenities/wifi.svg" },
-  { title: "Compound Parking", img: "/amenities/parking.svg" },
-  { title: "Private Pool", img: "/amenities/swimming.svg" },
-  { title: "Pet Friendly", img: "/amenities/pet-friendly.svg" },
-  { title: "Pickup Service", img: "/amenities/pickup.svg" },
-  { title: "Luggage Dropoff", img: "/amenities/luggage.svg" },
-  { title: "Long Term Staycation", img: "/amenities/longterm.svg" },
-  { title: "Cleaning Service", img: "/amenities/cleaning.svg" },
-];
 
 
 
@@ -31,7 +21,7 @@ export default function Home() {
 
 
 
-      <h1 className="font-headingFont text-3xl text-center z-30 text-llcream md:text-5xl m-auto">An intimate stay crafted by passionate travellers.</h1>
+      <h1 className="font-headingFont text-3xl text-center z-30 text-llcream md:text-5xl absolute bottom-[400px]">An intimate stay crafted by passionate travellers.</h1>
 
        <div className="w-[50px] h-[50px] absolute z-10 bottom-[215px]">
           <Image alt="logo" width={100} height={100} src="/logo.svg" />
@@ -80,15 +70,15 @@ export default function Home() {
       <section className="about-us px-5  py-10 sm:py-14 xl:py-20">
               
               <div className="grid gap-y-10 md:gap-10 xl:gap-x-20 md:grid-cols-3 max-w-screen-xl m-auto">
-                    <h1 className="text-4xl sm:mr-[10%] md:col-span-2 md:text-6xl font-headingFont">Welcome to the most authentic home, where exquisite craftsmanship meets the quality of
- your life </h1>
+                    <h1 className="text-4xl sm:mr-[10%] md:col-span-2 md:text-7xl font-headingFont">Welcome to the most <i className="text-llbeige">authentic</i> home, where exquisite <i className="text-llbeige">craftsmanship</i> meets the quality of
+ <i className="text-llbeige"> your life</i> </h1>
 
               <Image className="w-full" alt='craft-vase' width={300} height={300} src={'/about-us-img.webp'}/>
 
           
-              <h3 className="text-sm sm:mr-[10%] md:col-span-2 md:max-w-[400px] md:ml-auto ">We are the only property management company based in Penang, Malaysia that focuses on luxurious interior designs and intimate experiences to provide unparalleled comfort for your close friends and loved ones. </h3>
+              <h3 className="sm:mr-[10%] md:col-span-2 md:max-w-[400px] md:ml-auto ">We are the only property management company based in Penang, Malaysia that focuses on luxurious interior designs and intimate experiences to provide unparalleled comfort for your close friends and loved ones. </h3>
 
-              <h3 className="text-sm">
+              <h3 className="">
                 Double L Villa, inspired by our founder&apos;s global travels and hospitality experiences, is crafted to provide the perfect staycation with a focus on creating memorable, intimate moments. Her passion for exceptional hospitality shines through in every detail, ensuring a stay that feels both indulgent and personal, making it a truly unique retreat.
               </h3>
               </div>
@@ -111,14 +101,14 @@ export default function Home() {
         <div className="sm:flex gap-10 max-w-screen-xl m-auto">
               <div className="basis-1/2 flex flex-col justify-center gap-8 mb-5">
                 <h1 className="text-5xl md:text-6xl font-headingFont">Exclusive Services</h1>
-                <h4 className="text-sm" >Double L Villa offers exclusive services designed to perfect every moment of your experience.</h4>
-                <div className="grid grid-cols-4 gap-5">
+                <h4 className=" text-llblack" >Double L Villa offers exclusive services designed to perfect every moment of your experience.</h4>
+                <div id="amenities" className="grid grid-cols-4 gap-5">
                    {amenities.map((amenity) => (
               <div key={amenity.title} className="font-headingFont text-center">
-                <Image className="m-auto w-[40px] h-[40px]" alt={amenity.img} width={100} height={100} src={amenity.img} />
+                <Image className="m-auto mb-5 w-[40px] h-[40px]" alt={amenity.img} width={100} height={100} src={amenity.img} />
 
                 <p
-                  className={`font-headingFont text-[16px] leading-[26px] tracking-tight`}
+                  className={`font-headingFont sm:text-[24px] text-llblack leading-[26px] tracking-tight`}
                 >
                   {amenity.title}
                 </p>
@@ -178,13 +168,20 @@ export default function Home() {
             <Image className="hidden w-[15%] aspect-square object-cover md:bottom-0 md:left-[5%] md:block absolute" alt="zen-garden" width={300} height={300} src={'/villa-images/Mint Villa-1.webp'}/>
 
 
-        <div className="px-5 py-10  md:py-0 md:absolute max-w-[500px] md:translate-y-[50%] md:left-[50%] md:translate-x-[-50%]">
-                    <h1 className="text-6xl font-headingFont mb-5">Early Bird & 
+        <div className="px-5 py-10  md:py-0 md:absolute max-w-[500px] md:translate-y-[50%] md:left-[50%] md:translate-x-[-50%] flex flex-col gap-14 items-center">
+                    <h1 className="text-6xl text-center font-headingFont ">Early Bird & 
 Last-Minute Deals!</h1>
 
-<h3 className="font-bodyFont text-sm">Indulge in a private getaway with exclusive experience like a private pool and a fully equipped kitchen.
-Book early for <span className="text-2xl">5% off</span>, or seize the moment with limited-time last-minute savings.</h3>
+<h3 className="font-bodyFont text-center">Indulge in a private getaway with exclusive experience like a private pool and a fully equipped kitchen.
+Book early for <span className="text-4xl font-headingFont">5% off</span>, or seize the moment with limited-time last-minute savings.</h3>
+
+
+   <button className="bg-llbrown text-white text-2xl font-bodyFont px-7 py-4">
+   
+   <Link href='/book'>Secure Your Stay Today!</Link></button>
         </div>
+
+       
 
    
            <Image className="w-[10%] top-[3%] hidden md:right-0 aspect-square object-cover md:block absolute" alt='pantry' width={300} height={300} src={'/villa-images/Mint Villa-14.webp'}/>

@@ -1,3 +1,4 @@
+import Link from "next/link"
 
 function FAQ() {
   return (
@@ -33,9 +34,9 @@ function FAQ() {
     </summary>
 
     <p className="mt-4 leading-relaxed text-gray-700">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic veritatis molestias culpa in,
-      recusandae laboriosam neque aliquid libero nesciunt voluptate dicta quo officiis explicabo
-      consequuntur distinctio corporis earum similique!
+      Refer to full list of amenities: <br />
+      <Link className="underline" href="#amenities">Amenities List</Link> <br />
+      For additional requests feel free to Whatsapp us at +6012-986 2373
     </p>
   </details>
 
@@ -69,11 +70,16 @@ function FAQ() {
       </span>
     </summary>
 
-    <p className="mt-4 leading-relaxed text-gray-700">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic veritatis molestias culpa in,
-      recusandae laboriosam neque aliquid libero nesciunt voluptate dicta quo officiis explicabo
-      consequuntur distinctio corporis earum similique!
-    </p>
+  
+     <ul className="mt-5 list-disc list-inside text-gray-700 font-bodyFont">
+      <li>
+        No parties allowed to ensure a peaceful environment for the neighbors.
+      </li>
+      <li>	Strictly no smoking in the villa.</li>
+      <li>Please use the pool only in a swimsuit.</li>
+      <li>Do not add soap or detergent to the pool.</li>
+     </ul>
+ 
   </details>
 
    <details className="group p-6 [&_summary::-webkit-details-marker]:hidden">
@@ -107,16 +113,15 @@ function FAQ() {
     </summary>
 
     <p className="mt-4 leading-relaxed text-gray-700">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic veritatis molestias culpa in,
-      recusandae laboriosam neque aliquid libero nesciunt voluptate dicta quo officiis explicabo
-      consequuntur distinctio corporis earum similique!
+    Check in : 3pm 
+    <br />Check out : 11am
     </p>
   </details>
 
 
    <details className="group p-6 [&_summary::-webkit-details-marker]:hidden">
     <summary className="flex cursor-pointer items-center justify-between gap-1.5 text-gray-900">
-      <h2 className="text-lg ">Are there any current special promotions?</h2>
+      <h2 className="text-lg ">What is the current room rate?</h2>
 
     <span className="relative size-5 shrink-0">
         <svg
@@ -145,9 +150,10 @@ function FAQ() {
     </summary>
 
     <p className="mt-4 leading-relaxed text-gray-700">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic veritatis molestias culpa in,
-      recusandae laboriosam neque aliquid libero nesciunt voluptate dicta quo officiis explicabo
-      consequuntur distinctio corporis earum similique!
+      Kindly check the link below for all updated rates!
+      <br />
+
+      <Link className="underline text-llbrown" href='/booking'>Available Bookings</Link>
     </p>
   </details>
 
@@ -183,9 +189,7 @@ function FAQ() {
     </summary>
 
     <p className="mt-4 leading-relaxed text-gray-700">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic veritatis molestias culpa in,
-      recusandae laboriosam neque aliquid libero nesciunt voluptate dicta quo officiis explicabo
-      consequuntur distinctio corporis earum similique!
+      Kindly note that cancellations are not allowed once a reservation is made. However, in case of an emergency, we do offer the option to reschedule your stay, provided your request is made at least one week before your original check-in date.
     </p>
   </details>
 
@@ -221,9 +225,8 @@ function FAQ() {
     </summary>
 
     <p className="mt-4 leading-relaxed text-gray-700">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic veritatis molestias culpa in,
-      recusandae laboriosam neque aliquid libero nesciunt voluptate dicta quo officiis explicabo
-      consequuntur distinctio corporis earum similique!
+   We welcome pets and can accommodate up to 2 per stay. To help us maintain a clean and pleasant environment, we kindly ask for your cooperation. <br /><br /> A cleaning fee of RM50 per pet, per stay, will apply, and pets are strictly prohibited from entering the pool. <br /><br />
+   Please ensure that any mess left by your pets is cleaned immediately to avoid stains or unpleasant odors for the next guest. We appreciate your understanding and cooperation.
     </p>
   </details>
 
@@ -260,9 +263,7 @@ function FAQ() {
     </summary>
 
     <p className="mt-4 leading-relaxed text-gray-700">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic veritatis molestias culpa in,
-      recusandae laboriosam neque aliquid libero nesciunt voluptate dicta quo officiis explicabo
-      consequuntur distinctio corporis earum similique!
+      We do not provide pick up service.
     </p>
   </details>
 </div>

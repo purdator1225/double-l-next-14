@@ -1,6 +1,9 @@
+'use client';
 
 import FAQ from '@/components/FAQ'
 import Image from 'next/image'
+import { amenities } from '@/data/amenities'
+import { useState } from 'react'
 
 
 const rooms = [
@@ -53,11 +56,32 @@ const features=[
 
 ]
 
-
-
-
+const InfoItem = ({ icon, label, type }) => (
+  <div>
+    {type === 'svg' ? (
+      <div className="sm:m-auto" aria-label={`${label}-icon`}>
+        {icon()}  {/* Render SVG component as a function call */}
+      </div>
+    ) : (
+      <Image className='sm:m-auto' alt={`${label}-icon`} width={45} height={45} src={icon} />
+    )}
+    <h3 className='font-headingFont text-xl sm:mt-6'>{label}</h3>
+  </div>
+);
 
 function MintVilla() {
+
+   const [showFullList, setShowFullList] = useState(false);
+
+    const minAmenitiesCount = 5;
+
+  const displayedAmenities = showFullList ? amenities : amenities.slice(0, Math.min(minAmenitiesCount, amenities.length));
+
+  console.log(displayedAmenities)
+
+
+
+
   return (
     <main>
 
@@ -85,42 +109,28 @@ function MintVilla() {
 
     <div className='sm:flex sm:gap-10 sm:justify-between'>
 
-    <h1 className=' text-4xl md:text-6xl basis-1/2 max-w-[600px] mb-5 font-headingFont font-medium italic'>All villas have a unique theme because we want our every guest to feel special.</h1>
+    <h1 className=' text-4xl md:text-6xl basis-1/2 max-w-[600px] mb-5 font-headingFont font-medium italic text-llbrown'>All villas have a unique theme because we want our every guest to feel special.</h1>
 
-    <p className='basis-1/2 max-w-[300px] font-bodyFont text-sm mb-5'>Our spacious 3-bedroom villa, which can accommodate up to 8 guests, features a private Jacuzzi pool and is nestled in a peaceful neighbourhood, offering a serene getaway. </p>
+    <p className='basis-1/2 max-w-[300px] font-bodyFont mb-5 text-llblack'>Our spacious 3-bedroom villa, which can accommodate up to 8 guests, features a private Jacuzzi pool and is nestled in a peaceful neighbourhood, offering a serene getaway. </p>
 
 
-
-    </div>
-
-    <div className='grid gap-6 sm:justify-items-center sm:my-20 grid-cols-2 sm:grid-cols-5'>
-
-    <div>
-      <Image className='sm:m-auto  ' alt='guest-icon' width={45} height={45} src={'/amenities/guest.svg'}/>
-      <h3 className='font-headingFont text-xl sm:mt-6'>8 Guests</h3>
-    </div>
-
-     <div>
-      <Image className='sm:m-auto ' alt='guest-icon' width={45} height={45} src={'/amenities/bed.svg'}/>
-      <h3 className='font-headingFont text-xl sm:mt-6'>3 Bedrooms</h3>
-    </div>
-
-     <div>
-      <Image className='sm:m-auto ' alt='guest-icon' width={45} height={45} src={'/amenities/shower.svg'}/>
-      <h3 className='font-headingFont text-xl sm:mt-6'>2 Baths</h3>
-    </div>
-
-     <div>
-      <Image className='sm:m-auto ' alt='guest-icon' width={45} height={45} src={'/amenities/pool.svg'}/>
-      <h3 className='font-headingFont text-xl sm:mt-6'>1 Jacuzzi</h3>
-    </div>
-
-     <div>
-      <Image className='sm:m-auto ' alt='guest-icon' width={45} height={45} src={'/amenities/pet.svg'}/>
-      <h3 className='font-headingFont text-xl sm:mt-6'>Pet Friendly</h3>
-    </div>
 
     </div>
+
+    <div id="amenities" className='grid gap-6 sm:justify-items-center sm:my-20 grid-cols-2 sm:grid-cols-5'>
+
+   {displayedAmenities.map((amenity, index) => (
+              <InfoItem type={amenity.type} key={index} icon={amenity.icon} label={amenity.title} />
+            ))}
+    </div>
+     <div className='text-center mt-5'>
+            <button
+              className='bg-llbrown text-white font-bodyFont py-2 px-5 rounded-full'
+              onClick={() => setShowFullList(!showFullList)}
+            >
+              {showFullList ? "Show Less" : "See Full List"}
+            </button>
+          </div>
 
 
     </div>
@@ -135,7 +145,7 @@ function MintVilla() {
     {rooms.map((room)=>(
       <div className='room-row py-5 sm:py-10' key={room.title}>
       
-      <h2 className='font-headingFont text-3xl mb-5'>{room.title} / {room.bed} bed {room.additions? `• ${room.additions}` : ''}</h2>
+      <h2 className='font-headingFont text-3xl text-llbrown mb-5'>{room.title} / {room.bed} bed {room.additions? `• ${room.additions}` : ''}</h2>
 
       <div className='sm:grid gap-5 sm:grid-cols-3'>
          {room.roomImages.map((roomImage,index)=>(
@@ -158,11 +168,11 @@ function MintVilla() {
 
         <Image alt={feature.title} width={500} height={500} className='mb-5' src={feature.featureImage}/>
 
-        <h2 className='font-headingFont text-3xl md:text-4xl mb-4 mr-5'>
+        <h2 className='font-headingFont text-llbrown text-3xl md:text-4xl mb-4 mr-5'>
           {feature.title}
         </h2>
 
-        <p className='font-bodyFont text-justify text-sm mr-10'>{feature.description}</p>
+        <p className='font-bodyFont text-llblack text-justify mr-10'>{feature.description}</p>
 
 
         </div>
@@ -179,7 +189,7 @@ function MintVilla() {
               <Image alt="star" width={31} height={31} src="/star-icon.svg"/>
               <h3 className="font-headingFont sm:text-2xl">We&apos;re Here To Help</h3>
             </div>
-            <h1 className='text-5xl italic font-headingFont'>
+            <h1 className='text-6xl text-llbrown italic font-headingFont'>
               Your Questions,<br />
 Perfectly Answered.
             </h1>

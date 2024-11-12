@@ -68,7 +68,7 @@ const MediaSlider = () => {
     <Swiper
         ref={swiper2Ref}
         direction='horizontal'
-      modules={[Navigation, Autoplay]}
+      modules={[Navigation, Autoplay,Pagination]}
       spaceBetween={30}
      // Show 4 slides on desktop
      slidesPerView={2}
@@ -118,13 +118,13 @@ const MediaSlider = () => {
         </SwiperSlide>
       ))}
 
-      <div className="swiper-button-prev custom-swiper-button">
-        <Image className='min-w-[50px]' alt='left-arrow' width={100} height={100} src={'/ll-arrow-left.svg'}/>
+      <div className="swiper-button-prev w-[100px] h-[100px]">
+        <Image className=' aspect-square' alt='left-arrow' width={100} height={100} src={'/ll-arrow-left.svg'}/>
 
 
       </div>
-        <div className="swiper-button-next custom-swiper-button">
-            <Image alt='right-arrow' width={100} height={100} src={'/ll-arrow-right.svg'}/>
+        <div className="swiper-button-next w-[100px] h-[100px]">
+            <Image  className='w-[100px] aspect-square' alt='right-arrow' width={100} height={100} src={'/ll-arrow-right.svg'}/>
         </div>
     </Swiper>
   );

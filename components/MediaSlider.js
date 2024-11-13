@@ -111,6 +111,7 @@ const MediaSlider = () => {
               controls={false}
               autoPlay
               muted
+              playsInline
               loop
               style={{ width: '100%', height: 'auto' }}
             />

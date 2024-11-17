@@ -1,11 +1,14 @@
 'use client';
 
+import { useRef } from "react";
+
 import Image from "next/image";
 import { motion } from "framer-motion";
 import VillaSlider from "@/components/VillaSlider";
 import MediaSlider from "@/components/MediaSlider";
 import BeSearchForm from "../components/be-forms/be-search-form";
 import Link from "next/link";
+import FeaturedIn from "@/components/FeaturedIn";
 
 export const amenities = [
     { title: "Free Wifi Access", icon: "/amenities/wifi.svg", type: 'image' },
@@ -20,6 +23,12 @@ export const amenities = [
 
 
 export default function Home() {
+
+  //magazine text 
+  const magazineText = useRef()
+
+
+
   return (
     <main className="font-bodyFont">
 
@@ -93,7 +102,7 @@ export default function Home() {
 
       </section>
 
-          <section className="villa-slider-section  bg-gradient-to-b from-white to-llcream py-10 md:py-14 xl:py-20">
+          <section id="villas" className="villa-slider-section  bg-gradient-to-b from-white to-llcream py-10 md:py-14 xl:py-20">
 
         <div className="max-w-screen-xl m-auto px-5">
           <h1 className="text-5xl md:text-6xl font-headingFont mb-5">Our Villas</h1>
@@ -159,13 +168,7 @@ export default function Home() {
 
         </section>
 
-        <section className="featured-in bg-featured-bg bg-cover min-h-[90vh] py-10 md:py-20 bg-center overflow-hidden relative px-5 md:px-14">
-          <h1 className="absolute text-6xl sm:text-[230px] inline-block font-headingFont text-white text-nowrap">Proudly Featured In</h1>
-
-          <Image className="w-[300px] absolute left-[50%] translate-x-[-50%] translate-y-[20%] z-10 object-cover h-[470px]" alt="goingplaces" width={500} height={500} src={'/magazine.webp'}/>
-
-
-        </section>
+       <FeaturedIn/>
 
 
         <section className="promo-section md:min-h-[70vh] relative  ">

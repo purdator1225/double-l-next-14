@@ -1,4 +1,4 @@
-import { HairDryerIcon, BathTubIcon,BodySoapIcon,AirConIcon,ShampooIcon,WasherIcon,EssentialsIcon,IronIcon,TVIcon,KitchenIcon,FridgeIcon,CookingIcon } from "./amenityIcons"
+import { HairDryerIcon, BathTubIcon,BodySoapIcon,AirConIcon,ShampooIcon,WasherIcon,EssentialsIcon,IronIcon,TVIcon,KitchenIcon,FridgeIcon,CookingIcon, KettleIcon } from "./amenityIcons"
 
 
 
@@ -88,8 +88,9 @@ export const amenities = [
     },
     {
         id: 13,
-        title: '8 Guests',
-        imgUrl: '/'
+        title: 'Hot Water Kettle',
+        icon: KettleIcon,
+        type: 'svg'
     },
 
 ]

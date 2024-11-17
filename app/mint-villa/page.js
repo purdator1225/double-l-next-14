@@ -59,7 +59,7 @@ const features=[
 const InfoItem = ({ icon, label, type }) => (
   <div>
     {type === 'svg' ? (
-      <div className="sm:m-auto" aria-label={`${label}-icon`}>
+      <div className="sm:m-auto flex flex-row justify-center" aria-label={`${label}-icon`}>
         {icon()}  {/* Render SVG component as a function call */}
       </div>
     ) : (

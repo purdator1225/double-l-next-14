@@ -37,8 +37,8 @@ const [hoveredIndex, setHoveredIndex] = useState(null); // Track the hovered sli
       id: "saltvilla",
       cover: "/saltvilla_cardimg.png",
       para: "Salt Villa is a perfect getaway designed for couples...",
-      comingsoon: "Coming Soon",
-      slug:'/'
+      comingsoon: "",
+      slug:'salt-villa'
     },
     {
       active: false,

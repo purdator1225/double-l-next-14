@@ -15,8 +15,8 @@ function Footer() {
        <div className='md:m-auto'><h2 className='font-headingFont text-3xl mb-5'>Our Villa</h2>
 
        <div className='flex flex-col'>
-         <Link href={'/'}>MINT VILLA</Link>
-       <Link href={'/'}>SALT VILLA(COMING SOON)</Link>
+         <Link href={'/mint-villa'}>MINT VILLA</Link>
+       <Link href={'/salt-villa'}>SALT VILLA</Link>
        <Link href={'/'}>PEARL VILLA(COMING SOON)</Link>
        </div>
 

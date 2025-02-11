@@ -35,14 +35,14 @@ const [hoveredIndex, setHoveredIndex] = useState(null); // Track the hovered sli
       active: false,
       title: "Salt Villa",
       id: "saltvilla",
-      cover: "/saltvilla_cardimg.png",
+      cover: "/villa-images/salt-villa/salt_villa_2.jpeg",
       para: "Salt Villa is a perfect getaway designed for couples...",
       comingsoon: "",
       slug:'salt-villa'
     },
     {
       active: false,
-      title: "Pearl Villa",
+      title: "Shinju Villa",
       id: "pearlvilla",
       cover: "/pearlvilla_cardimg.png",
       para: "Pearl Villa is a perfect getaway designed for couples...",

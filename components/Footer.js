@@ -17,7 +17,7 @@ function Footer() {
        <div className='flex flex-col'>
          <Link href={'/mint-villa'}>MINT VILLA</Link>
        <Link href={'/salt-villa'}>SALT VILLA</Link>
-       <Link href={'/'}>PEARL VILLA(COMING SOON)</Link>
+       <Link href={'/'}>SHINJU VILLA(COMING SOON)</Link>
        </div>
 
       

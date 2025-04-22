@@ -11,9 +11,9 @@ const rooms = [
     bed: 'King',
     additions: '2 Single Floor Mattress',
     roomImages: [
-      '/villa-images/salt-villa/salt_villa_14.jpeg',
-      '/villa-images/salt-villa/salt_villa_15.jpeg',
-      '/villa-images/salt-villa/salt_villa_22.jpeg',
+      '/villa-images/salt-villa/salt_villa_mb_1.jpg',
+      '/villa-images/salt-villa/salt_villa_mb-2.jpg',
+      '/villa-images/salt-villa/salt_villa_mb-3.jpg',
 
     ]
   },
@@ -22,8 +22,9 @@ const rooms = [
     bed: 'Queen',
     additions:'Single Floor Mattress',
     roomImages: [
-       '/villa-images/salt-villa/salt_villa_13.jpeg',
-     '/villa-images/salt-villa/salt_villa_19.jpeg',
+      '/villa-images/salt-villa/salt_villa_qb-2.jpg',
+      '/villa-images/salt-villa/salt_villa_qb-3.jpg',
+       '/villa-images/salt-villa/salt_villa_qb-1.jpg',
 
     ]
   },
@@ -45,24 +46,24 @@ const features=[
   { 
     title: 'Rooftop Jacuzzi Pool',
     description: 'Salt Villa’s rooftop Jacuzzi pool offers the perfect setting to enjoy serene, luxurious moments with loved ones.',
-    featureImage:'/villa-images/salt-villa/salt_villa_1.jpeg'
+    featureImage:'/villa-images/salt-villa/salt_villa_1.jpg'
   }
   ,
    { 
     title: 'Shower Room',
     description: 'All shower rooms feature a sleek, modern design and provide Malaysia-inspired botanical bath amenities and rain showerheads  for a refreshing, relaxing experience.',
-    featureImage:'/villa-images/salt-villa/salt_villa_21.jpeg'
+    featureImage:'/villa-images/salt-villa/salt_villa_shower.jpg'
   },
   { 
     title: 'Living Room',
-    description: 'The modern living room has a sleek sofa bed, wall-mounted TV, floor-to-ceiling windows and calming,aesthetic architecture',
-    featureImage:'/villa-images/salt-villa/salt_villa_20.jpeg'
+    description: 'The modern living room has a sleek sofa bed, wall-mounted TV, floor-to-ceiling windows and calming, aesthetic architecture',
+    featureImage:'/villa-images/salt-villa/salt_villa_living_room.jpg'
   }
 
 ]
 
 const InfoItem = ({ icon, label, type }) => (
-  <div>
+  <div className='flex flex-col justify-center items-center'>
     {type === 'svg' ? (
       <div className="sm:m-auto flex flex-row justify-center" aria-label={`${label}-icon`}>
         {icon()}  {/* Render SVG component as a function call */}
@@ -92,12 +93,12 @@ function SaltVilla() {
 
     <section className='min-h-[70vh] grid place-items-center bg-cover bg-center bg-salt-hero'>
 
-    <div>
-            <h1 className='text-6xl font-headingFont text-white text-center '>Salt Villa</h1>
+    {/* <div>
+            <h1 className='text-6xl font-headingFont text-black text-center '>Salt Villa</h1>
 
-        <h2 className='text-3xl font-headingFont text-white text-center'>A pinch of charm in every stay.</h2>
+        <h2 className='text-3xl font-headingFont text-black text-center'>A pinch of charm in every stay.</h2>
 
-    </div>
+    </div> */}
 
     
 
@@ -109,7 +110,7 @@ function SaltVilla() {
     <div className='max-w-screen-lg m-auto'>
        <div className="border-solid border-[1px] gap-5 border-black flex justify-center rounded-full items-center mb-5  w-fit py-1 px-8">
               <Image alt="star" width={31} height={31} src="/star-icon.svg"/>
-              <h3 className="font-headingFont sm:text-2xl">Our Villa</h3>
+              <h3 className="font-headingFont sm:text-2xl">Salt Villa</h3>
             </div>
 
     <div className='sm:flex sm:gap-10 sm:justify-between'>

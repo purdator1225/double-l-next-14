@@ -35,7 +35,7 @@ const [hoveredIndex, setHoveredIndex] = useState(null); // Track the hovered sli
       active: false,
       title: "Salt Villa",
       id: "saltvilla",
-      cover: "/villa-images/salt-villa/salt_villa_2.jpeg",
+      cover: "/villa-images/salt-villa/salt_villa_5.jpg",
       para: "Salt Villa is a perfect getaway designed for couples...",
       comingsoon: "",
       slug:'salt-villa'

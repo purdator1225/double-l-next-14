@@ -7,6 +7,16 @@ import { useState } from 'react'
 
 
 const rooms = [
+     {title: "Rooftop Pool",
+    bed: "",
+    roomImages: [
+      "/villa-images/salt-villa/salt-villa-rooftop-1.jpg",
+       "/villa-images/salt-villa/salt-villa-rooftop-2.jpg",
+         "/villa-images/salt-villa/salt-villa-rooftop-3.jpg",
+      
+
+    ]
+  },
   {title: "Bedroom 1",
     bed: 'King',
     additions: '2 Single Floor Mattress',
@@ -29,24 +39,29 @@ const rooms = [
     ]
   },
 
-//    {title: "Bedroom 3",
-//     bed: 'Queen',
-//     roomImages: [
-//        '/villa-images/Mint Villa-8.webp',
-//       '/villa-images/Mint Villa-7.webp',
+   {title: "Living Room",
+    bed: "",
+    roomImages: [
+      "/villa-images/salt-villa/salt_villa_living_room_1.jpg",
+       "/villa-images/salt-villa/salt_villa_living_room_2.jpg",
+              '/villa-images/salt-villa/salt_villa_5.jpg',
+
+        // "/villa-images/salt-villa/salt_villa_living_room_3.jpg"
       
 
-//     ]
-//   },
+    ]
+  },
+
+  
 
 
 ]
 
 const features=[
   { 
-    title: 'Rooftop Jacuzzi Pool',
-    description: 'Salt Villa’s rooftop Jacuzzi pool offers the perfect setting to enjoy serene, luxurious moments with loved ones.',
-    featureImage:'/villa-images/salt-villa/salt_villa_1.jpg'
+    title: 'Picturesque Exterior',
+    description: 'Salt Villa draws inspiration from Mediterranean and Balinese architectural styles, every corner is Instagram-perfect.',
+    featureImage:'/villa-images/salt-villa/salt-villa-exterior.jpg'
   }
   ,
    { 
@@ -55,10 +70,30 @@ const features=[
     featureImage:'/villa-images/salt-villa/salt_villa_shower.jpg'
   },
   { 
-    title: 'Living Room',
-    description: 'The modern living room has a sleek sofa bed, wall-mounted TV, floor-to-ceiling windows and calming, aesthetic architecture',
-    featureImage:'/villa-images/salt-villa/salt_villa_living_room.jpg'
+    title: 'Kitchen',
+    description: 'Salt Villa includes a fully equipped kitchen with modern appliances and a clean design that blends seamlessly with the villa’s minimalist aesthetic',
+    featureImage:'/villa-images/salt-villa/salt-villa-kitchen.jpg'
+  },
+
+  { 
+   
+    featureImage:'/villa-images/salt-villa/salt-villa-outdoors.jpg'
+  },
+
+
+  { 
+   
+    featureImage:'/villa-images/salt-villa/salt-villa-outdoors-2.jpg'
+  },
+
+   { 
+   
+    featureImage:"/villa-images/salt-villa/salt_villa_living_room_3.jpg"
   }
+
+
+
+ 
 
 ]
 
@@ -151,11 +186,11 @@ function SaltVilla() {
     {rooms.map((room)=>(
       <div className='room-row py-5 sm:py-10' key={room.title}>
       
-      <h2 className='font-headingFont text-3xl text-llbrown mb-5'>{room.title} / {room.bed} bed {room.additions? `• ${room.additions}` : ''}</h2>
+      <h2 className='font-headingFont text-3xl text-llbrown mb-5'>{room.title} {room.bed ? ` • ${room.bed} bed` : ''} {room.additions? `• ${room.additions}` : ''}</h2>
 
       <div className='sm:grid gap-5 sm:grid-cols-3'>
          {room.roomImages.map((roomImage,index)=>(
-      <Image className='object-cover mb-5 h-full object-center' key={`room-${index}`} alt='room-image' width={900} height={900} src={roomImage}/>
+      <Image className='object-cover mb-5 h-full object-center' key={`room-${index}`} alt='room-image' width={500} height={300} src={roomImage}/>
      ))}
       </div>
 

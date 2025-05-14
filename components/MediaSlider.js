@@ -6,6 +6,9 @@ import 'swiper/css';
 // import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
+import ExportedImage from 'next-image-export-optimizer';
+
+
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 // import { Navigation, Pagination } from 'swiper';
@@ -98,7 +101,7 @@ const MediaSlider = () => {
       {mediaItems.map((item, index) => (
         <SwiperSlide className='m-auto' key={index}>
           {item.type === 'image' ? (
-            <Image
+            <ExportedImage
                 width={500}
                 height={500}
               src={item.src}
@@ -120,12 +123,12 @@ const MediaSlider = () => {
       ))}
 
       <div className="swiper-button-prev w-[100px] h-[100px]">
-        <Image className=' aspect-square' alt='left-arrow' width={100} height={100} src={'/ll-arrow-left.svg'}/>
+        <ExportedImage className=' aspect-square' alt='left-arrow' width={100} height={100} src={'/ll-arrow-left.svg'}/>
 
 
       </div>
         <div className="swiper-button-next w-[100px] h-[100px]">
-            <Image  className='w-[100px] aspect-square' alt='right-arrow' width={100} height={100} src={'/ll-arrow-right.svg'}/>
+            <ExportedImage className='w-[100px] aspect-square' alt='right-arrow' width={100} height={100} src={'/ll-arrow-right.svg'}/>
         </div>
     </Swiper>
   );

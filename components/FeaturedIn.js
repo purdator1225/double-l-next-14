@@ -2,6 +2,9 @@ import { motion, useInView } from "framer-motion";
 import { useState, useRef } from "react";
 import Image from "next/image";
 
+import ExportedImage from 'next-image-export-optimizer';
+
+
 export default function FeaturedIn() {
 
 
@@ -67,7 +70,7 @@ export default function FeaturedIn() {
                 backfaceVisibility: "hidden",
               }}
             >
-              <Image
+              <ExportedImage
                 className="w-full h-full object-contain"
                 alt="Going Places Magazine"
                 width={500}
@@ -84,7 +87,7 @@ export default function FeaturedIn() {
                 transform: "rotateY(180deg)",
               }}
             >
-              <Image
+              <ExportedImage
                 className="w-full h-full object-contain"
                 alt="Mint Magazine"
                 width={800}

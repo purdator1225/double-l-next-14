@@ -5,6 +5,9 @@ import Image from 'next/image'
 import { amenities } from '@/data/amenities'
 import { useState } from 'react'
 
+import ExportedImage from 'next-image-export-optimizer';
+
+
 
 const rooms = [
   {title: "Bedroom 1",
@@ -63,7 +66,7 @@ const InfoItem = ({ icon, label, type }) => (
         {icon()}  {/* Render SVG component as a function call */}
       </div>
     ) : (
-      <Image className='sm:m-auto' alt={`${label}-icon`} width={45} height={45} src={icon} />
+      <ExportedImage className='sm:m-auto' alt={`${label}-icon`} width={45} height={45} src={icon} />
     )}
     <h3 className='font-headingFont text-xl sm:mt-6'>{label}</h3>
   </div>
@@ -103,7 +106,7 @@ function MintVilla() {
 
     <div className='max-w-screen-lg m-auto'>
        <div className="border-solid border-[1px] gap-5 border-black flex justify-center rounded-full items-center mb-5  w-fit py-1 px-8">
-              <Image alt="star" width={31} height={31} src="/star-icon.svg" loader={({ src }) => src}/>
+              <ExportedImage alt="star" width={31} height={31} src="/star-icon.svg" loader={({ src }) => src}/>
               <h3 className="font-headingFont sm:text-2xl">Our Villa</h3>
             </div>
 
@@ -149,7 +152,7 @@ function MintVilla() {
 
       <div className='sm:grid gap-5 sm:grid-cols-3'>
          {room.roomImages.map((roomImage,index)=>(
-      <Image className='object-cover mb-5 h-full object-center' key={`room-${index}`} alt='room-image' width={900} height={900} src={roomImage}/>
+      <ExportedImage className='object-cover mb-5 h-full object-center' key={`room-${index}`} alt='room-image' width={900} height={900} src={roomImage}/>
      ))}
       </div>
 
@@ -166,7 +169,7 @@ function MintVilla() {
       features.map((feature,index)=>(
         <div className='feature-card py-10 md:py-14 xl:py-20 max-w-[400px] mb-8' key={index}>
 
-        <Image alt={feature.title} width={500} height={500} className='mb-5' src={feature.featureImage}/>
+        <ExportedImage alt={feature.title} width={500} height={500} className='mb-5' src={feature.featureImage}/>
 
         <h2 className='font-headingFont text-llbrown text-3xl md:text-4xl mb-4 mr-5'>
           {feature.title}
@@ -186,7 +189,7 @@ function MintVilla() {
     <section>
     <div className='max-w-screen-xl m-auto'>
        <div className="border-solid border-[1px] gap-5 border-black flex justify-center rounded-full items-center mb-5  w-fit py-1 px-8">
-              <Image alt="star" width={31} height={31} src="/star-icon.svg" loader={({ src }) => src}/>
+              <ExportedImage alt="star" width={31} height={31} src="/star-icon.svg" loader={({ src }) => src}/>
               <h3 className="font-headingFont sm:text-2xl">We&apos;re Here To Help</h3>
             </div>
             <h1 className='text-6xl text-llbrown italic font-headingFont'>

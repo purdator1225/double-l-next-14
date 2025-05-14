@@ -15,10 +15,18 @@ import { AiOutlineRightCircle } from "react-icons/ai";
 
 import { Navigation, Pagination } from 'swiper/modules';
 import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
+
+
+
+
 
 export default function VillaSlider() {
 
 const [hoveredIndex, setHoveredIndex] = useState(null); // Track the hovered slide
+
+
+
 
 
   const villas = [
@@ -79,7 +87,7 @@ const [hoveredIndex, setHoveredIndex] = useState(null); // Track the hovered sli
 
           <Link href={villa.slug}>
             <div className="image-container w-[full] aspect-[4/5]">
-              <Image
+              <ExportedImage
                className={`object-cover transition-transform duration-[700ms] ease-in-out ${hoveredIndex === index ? 'scale-110' : 'scale-100'}`}
                 src={villa.cover}
                 alt={villa.title}

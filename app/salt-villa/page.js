@@ -130,7 +130,7 @@ function SaltVilla() {
 
         <div className='max-w-screen-lg m-auto'>
           <div className="border-solid border-[1px] gap-5 border-black flex justify-center rounded-full items-center mb-5  w-fit py-1 px-8">
-            <Image alt="star" width={31} height={31} src="/star-icon.svg" />
+            <Image alt="star" width={31} height={31} src="/star-icon.svg" loader={({ src }) => src} />
             <h3 className="font-headingFont sm:text-2xl">Salt Villa</h3>
           </div>
 
@@ -213,7 +213,7 @@ function SaltVilla() {
       <section>
         <div className='max-w-screen-xl m-auto'>
           <div className="border-solid border-[1px] gap-5 border-black flex justify-center rounded-full items-center mb-5  w-fit py-1 px-8">
-            <Image alt="star" width={31} height={31} src="/star-icon.svg" />
+            <Image alt="star" width={31} height={31} src="/star-icon.svg" loader={({ src }) => src} />
             <h3 className="font-headingFont sm:text-2xl">We&apos;re Here To Help</h3>
           </div>
           <h1 className='text-6xl text-llbrown italic font-headingFont'>

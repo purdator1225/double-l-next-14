@@ -146,7 +146,7 @@ export default function Home() {
         <div className="max-w-screen-xl m-auto">
 
             <div className="border-solid border-[1px] gap-5 border-black flex justify-center rounded-full items-center mb-5 m-auto w-fit py-1 px-8">
-              <Image alt="star" width={31} height={31} src="/star-icon.svg"/>
+              <Image alt="star" width={31} height={31} src="/star-icon.svg" loader={({ src }) => src} />
               <h3 className="font-headingFont sm:text-2xl">Hear Our Guests Experience</h3>
             </div>
 

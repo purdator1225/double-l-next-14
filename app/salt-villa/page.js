@@ -47,7 +47,7 @@ const rooms = [
     roomImages: [
       'villa-images/salt-villa/salt_villa_living_room_1.jpg',
       'villa-images/salt-villa/salt_villa_living_room_2.jpg',
-      'villa-images/salt-villa/salt_villa_living_room_3.jpg',
+      'villa-images/salt-villa/salt_villa_5.jpg',
     ]
   },
 ];

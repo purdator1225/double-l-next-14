@@ -19,8 +19,6 @@ import ExportedImage from 'next-image-export-optimizer';
 
 
 
-
-
 export default function VillaSlider() {
 
 const [hoveredIndex, setHoveredIndex] = useState(null); // Track the hovered slide

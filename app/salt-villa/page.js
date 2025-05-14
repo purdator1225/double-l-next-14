@@ -4,37 +4,19 @@ import FAQ from '@/components/FAQ'
 import Image from 'next/image'
 import { amenities } from '@/data/amenities'
 import { useState } from 'react'
+import ExportedImage from 'next-image-export-optimizer';
 
-import saltVillaRooftop1 from '@/public/villa-images/salt-villa/salt-villa-rooftop-1.jpg';
-import saltVillaRooftop2 from '@/public/villa-images/salt-villa/salt-villa-rooftop-2.jpg';
-import saltVillaRooftop3 from '@/public/villa-images/salt-villa/salt-villa-rooftop-3.jpg';
 
-import saltVillaMb1 from '@/public/villa-images/salt-villa/salt_villa_mb_1.jpg';
-import saltVillaMb2 from '@/public/villa-images/salt-villa/salt_villa_mb-2.jpg';
-import saltVillaMb3 from '@/public/villa-images/salt-villa/salt_villa_mb-3.jpg';
 
-import saltVillaQb1 from '@/public/villa-images/salt-villa/salt_villa_qb-1.jpg';
-import saltVillaQb2 from '@/public/villa-images/salt-villa/salt_villa_qb-2.jpg';
-import saltVillaQb3 from '@/public/villa-images/salt-villa/salt_villa_qb-3.jpg';
-
-import saltVillaLivingRoom1 from '@/public/villa-images/salt-villa/salt_villa_living_room_1.jpg';
-import saltVillaLivingRoom2 from '@/public/villa-images/salt-villa/salt_villa_living_room_2.jpg';
-import saltVillaLivingRoom3 from '@/public/villa-images/salt-villa/salt_villa_living_room_3.jpg';
-
-import saltVillaExterior from '@/public/villa-images/salt-villa/salt-villa-exterior.jpg';
-import saltVillaShower from '@/public/villa-images/salt-villa/salt_villa_shower.jpg';
-import saltVillaKitchen from '@/public/villa-images/salt-villa/salt-villa-kitchen.jpg';
-import saltVillaOutdoors1 from '@/public/villa-images/salt-villa/salt-villa-outdoors.jpg';
-import saltVillaOutdoors2 from '@/public/villa-images/salt-villa/salt-villa-outdoors-2.jpg';
 
 const rooms = [
   {
     title: "Rooftop Pool",
     bed: "",
     roomImages: [
-      saltVillaRooftop1,
-      saltVillaRooftop2,
-      saltVillaRooftop3,
+      'villa-images/salt-villa/salt-villa-rooftop-1.jpg',
+      'villa-images/salt-villa/salt-villa-rooftop-2.jpg',
+      'villa-images/salt-villa/salt-villa-rooftop-3.jpg',
     ]
   },
   {
@@ -42,9 +24,9 @@ const rooms = [
     bed: 'King',
     additions: '2 Single Floor Mattress',
     roomImages: [
-      saltVillaMb1,
-      saltVillaMb2,
-      saltVillaMb3,
+      'villa-images/salt-villa/salt_villa_mb_1.jpg',
+      'villa-images/salt-villa/salt_villa_mb-2.jpg',
+      'villa-images/salt-villa/salt_villa_mb-3.jpg',
     ]
   },
 
@@ -53,9 +35,9 @@ const rooms = [
     bed: 'Queen',
     additions: 'Single Floor Mattress',
     roomImages: [
-      saltVillaQb2,
-      saltVillaQb3,
-      saltVillaQb1,
+      'villa-images/salt-villa/salt_villa_qb-1.jpg',
+      'villa-images/salt-villa/salt_villa_qb-2.jpg',
+      'villa-images/salt-villa/salt_villa_qb-3.jpg',
     ]
   },
 
@@ -63,49 +45,43 @@ const rooms = [
     title: "Living Room",
     bed: "",
     roomImages: [
-      saltVillaLivingRoom1,
-      saltVillaLivingRoom2,
-      saltVillaLivingRoom3,
+      'villa-images/salt-villa/salt_villa_living_room_1.jpg',
+      'villa-images/salt-villa/salt_villa_living_room_2.jpg',
+      'villa-images/salt-villa/salt_villa_living_room_3.jpg',
     ]
   },
-
-]
+];
 
 const features = [
   {
     title: 'Picturesque Exterior',
     description: 'Salt Villa draws inspiration from Mediterranean and Balinese architectural styles, every corner is Instagram-perfect.',
-    featureImage: saltVillaExterior
-  }
-  ,
+    featureImage: 'villa-images/salt-villa/salt-villa-exterior.jpg'
+  },
   {
     title: 'Shower Room',
     description: 'All shower rooms feature a sleek, modern design and provide Malaysia-inspired botanical bath amenities and rain showerheads  for a refreshing, relaxing experience.',
-    featureImage: saltVillaShower
+    featureImage: 'villa-images/salt-villa/salt_villa_shower.jpg'
   },
   {
     title: 'Kitchen',
     description: 'Salt Villa includes a fully equipped kitchen with modern appliances and a clean design that blends seamlessly with the villa’s minimalist aesthetic',
-    featureImage: saltVillaKitchen
+    featureImage: 'villa-images/salt-villa/salt-villa-kitchen.jpg'
   },
 
   {
-
-    featureImage: saltVillaOutdoors1
-  },
-
-
-  {
-
-    featureImage: saltVillaOutdoors2
+    featureImage: 'villa-images/salt-villa/salt-villa-outdoors.jpg'
   },
 
   {
+    featureImage: 'villa-images/salt-villa/salt-villa-outdoors-2.jpg'
+  },
 
-    featureImage: saltVillaLivingRoom3
+  {
+    featureImage: 'villa-images/salt-villa/salt_villa_living_room_3.jpg'
   }
+];
 
-]
 
 const InfoItem = ({ icon, label, type }) => (
   <div className='flex flex-col justify-center items-center'>
@@ -200,7 +176,7 @@ function SaltVilla() {
 
             <div className='sm:grid gap-5 sm:grid-cols-3'>
               {room.roomImages.map((roomImage, index) => (
-                <Image className='object-cover mb-5 h-full object-center' key={`room-${index}`} alt='room-image' width={500} height={300} src={roomImage} />
+                <ExportedImage className='object-cover mb-5 h-full object-center' key={`room-${index}`} alt='room-image' width={500} height={300} src={roomImage} />
               ))}
             </div>
 
@@ -217,7 +193,7 @@ function SaltVilla() {
           features.map((feature, index) => (
             <div className='feature-card pt-10 md:pt-14 xl:pt-20 max-w-[400px] mb-8' key={index}>
 
-              <Image alt={feature.title} width={500} height={500} className='mb-5' src={feature.featureImage} />
+              <ExportedImage alt={feature.title} width={500} height={500} className='mb-5' src={feature.featureImage} />
 
               <h2 className='font-headingFont text-llbrown text-3xl md:text-4xl mb-4 mr-5'>
                 {feature.title}

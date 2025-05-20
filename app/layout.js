@@ -35,11 +35,27 @@ export const metadata = {
         sizes: "32x32",
         url: "/favicon-32x32.png",
       },
+      { rel: "shortcut icon", url: "/favicon.ico" },
     ],
     apple: "/apple-touch-icon.png",
-    shortcut: "/favicon.ico",
   },
-  manifest: "/site.webmanifest", // Optional: If you have a web app manifest
+  manifest: "/site.webmanifest",
+  openGraph: {
+    title: "Double L Villa",
+    description: "Where You Live to Love and Laugh",
+    url: "https://www.doublelvilla.com", // Replace with your actual domain
+    siteName: "Double L Villa",
+    images: [
+      {
+        url: "/villa-images/mint-villa-2.webp", // Place your Open Graph image in /public
+        width: 1200,
+        height: 630,
+        alt: "Double L Villa",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }) {

@@ -4,20 +4,18 @@ import "./be-style.css";
 import { Cormorant_Garamond, Work_Sans } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Head from "next/head";
-import Script from "next/script";
 
 const headingFont = Cormorant_Garamond({
-  subsets:["latin"],
+  subsets: ["latin"],
   variable: "--font-heading",
-  style: ['normal', 'italic'],
-  weight: ['300', '400','500','600'],
-  display:'swap'
+  style: ["normal", "italic"],
+  weight: ["300", "400", "500", "600"],
+  display: "swap",
 });
 const bodyFont = Work_Sans({
- subsets:["latin"],
+  subsets: ["latin"],
   variable: "--font-body",
-  weight: ['200', '400'],
+  weight: ["200", "400"],
 });
 
 export const metadata = {
@@ -25,8 +23,18 @@ export const metadata = {
   description: "Where You Live to Love and Laugh",
   icons: {
     icon: [
-      { rel: "icon", type: "image/png", sizes: "16x16", url: "/favicon-16x16.png" },
-      { rel: "icon", type: "image/png", sizes: "32x32", url: "/favicon-32x32.png" },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "16x16",
+        url: "/favicon-16x16.png",
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "32x32",
+        url: "/favicon-32x32.png",
+      },
     ],
     apple: "/apple-touch-icon.png",
     shortcut: "/favicon.ico",
@@ -37,9 +45,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
-      
-      </Head>
       <body
         className={`${headingFont.variable} ${bodyFont.variable} antialiased`}
       >

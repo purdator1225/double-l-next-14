@@ -15,19 +15,17 @@ module.exports = {
         llcream: "#F0E2D5",
         llbeige: "#CEC2AC",
       },
-
-      fontFamily:{
+      fontFamily: {
         bodyFont: ["var(--font-body)"],
-        headingFont:["var(--font-heading)"],
+        headingFont: ["var(--font-heading)"],
       },
-         backgroundImage: {
+      backgroundImage: {
         "hero-bg": "url('/villa-images/mint-villa-2.webp')",
-        "featured-bg":"url('/villa-images/Mint Villa-19.webp')",
-        "mint-hero":"url('/villa-images/Mint Villa-21.webp')",
-        "booking-hero":"url('/villa-images/Mint Villa-11.webp')",
-        "salt-hero":"url('/villa-images/salt-villa/salt_villa_5.jpg')"
+        "featured-bg": "url('/villa-images/Mint Villa-19.webp')",
+        "mint-hero": "url('/villa-images/Mint Villa-21.webp')",
+        "booking-hero": "url('/villa-images/Mint Villa-11.webp')",
+        "salt-hero": "url('/villa-images/salt-villa/salt_villa_5.jpg')",
       },
-
     },
   },
   plugins: [],

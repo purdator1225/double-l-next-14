@@ -7,6 +7,10 @@
   --foreground: #171717;
 }
 
+body {
+  @apply font-bodyFont;
+}
+
 /* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -26,7 +30,6 @@
   }
 }
 
-
 .slider-container {
   width: 100%;
   max-width: 100vw;
@@ -42,21 +45,20 @@
   /* Set a fixed height for the image container */
 }
 
-
 .coming-soon {
   position: absolute;
   top: 20px; /* Adjust based on your preference */
   right: 10px;
   width: 100px; /* Set a fixed width for the circle */
   height: 100px;
-   display: flex; /* Flexbox to center the text */
+  display: flex; /* Flexbox to center the text */
   align-items: center; /* Center vertically */
   justify-content: center;
- /* Background color for the circle */
+  /* Background color for the circle */
   border: 1px solid white; /* White border */
   border-radius: 50%; /* Make it a circle */
   padding: 10px; /* Padding around the text */
-   /* Optional shadow */
+  /* Optional shadow */
   font-weight: bold;
   color: white; /* Text color */
   text-align: center;
@@ -71,18 +73,15 @@
   padding: 10px; /* Padding around the text */
 }
 
-
-
-.swiper{
+.swiper {
   width: 100%;
   position: relative;
 }
 
-.swiper-button-next::after,.swiper-button-prev::after{
+.swiper-button-next::after,
+.swiper-button-prev::after {
   content: "" !important;
-
 }
-
 
 .swiper-button-next,
 .swiper-button-prev {
@@ -92,21 +91,16 @@
   width: 100px !important;
   height: 100px !important;
   cursor: pointer;
- /* Adjust vertical centering   transform: translateY(50%); */
+  /* Adjust vertical centering   transform: translateY(50%); */
 }
 
-@media screen and (max-width:640px) {
-
+@media screen and (max-width: 640px) {
   .swiper-button-next,
-.swiper-button-prev
-{  width: 50px !important;
-  height: 50px !important;
-
+  .swiper-button-prev {
+    width: 50px !important;
+    height: 50px !important;
+  }
 }
-
-  
-}
-
 
 .swiper-button-prev {
   left: 0px !important; /* Center the left button */
@@ -116,15 +110,13 @@
   right: 0px !important; /* Center the right button with space */
 }
 
-.swiper-pagination{
+.swiper-pagination {
   bottom: 10px !important;
-
 }
 
-.swiper-pagination-bullet-active{
-  background-color: #5C3516 !important ;
+.swiper-pagination-bullet-active {
+  background-color: #5c3516 !important ;
 }
-
 
 /* .swiper-button-next svg,
 .swiper-button-prev svg {
@@ -132,22 +124,20 @@
   height: 100%;
   fill: #fff; /* Change SVG fill color */
 
-
 /* Add any hover effects or styles for better UX */
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
   opacity: 0.8;
 }
 
-.faq h2{
+.faq h2 {
   font-family: var(--font-heading);
   font-size: x-large;
   font-weight: 500;
 }
 
-.faq p{
-   font-family: var(--font-body);
+.faq p {
+  font-family: var(--font-body);
   font-size: medium;
   font-weight: 500;
-
 }

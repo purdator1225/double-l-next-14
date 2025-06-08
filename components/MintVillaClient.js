@@ -9,13 +9,24 @@ import ExportedImage from "next-image-export-optimizer";
 
 const rooms = [
   {
+    title: "Private Jacuzzi Pool",
+    bed: "",
+    additions: "",
+    roomImages: [
+      "/villa-images/Mint Villa-23.webp",
+      "/villa-images/Mint Villa-24.webp",
+      "/villa-images/mint-villa-pool3.jpeg",
+    ],
+  },
+
+  {
     title: "Bedroom 1",
     bed: "King",
     additions: "Floor Mattress",
     roomImages: [
       "/villa-images/Mint Villa-3.webp",
       "/villa-images/mint-villa-2.webp",
-      "/villa-images/Mint Villa-5.webp",
+      "/villa-images/Mint Villa-6.webp",
     ],
   },
 
@@ -35,6 +46,29 @@ const rooms = [
     roomImages: [
       "/villa-images/Mint Villa-8.webp",
       "/villa-images/Mint Villa-7.webp",
+      "/villa-images/Mint Villa-9.webp",
+    ],
+  },
+
+  {
+    title: "Living Room",
+    bed: "",
+    additions: "",
+    roomImages: [
+      "/villa-images/Mint Villa-17.webp",
+      "/villa-images/Mint Villa-18.webp",
+      "/villa-images/Mint Villa-13.webp",
+    ],
+  },
+
+  {
+    title: "Exteriors",
+    bed: "",
+    additions: "",
+    roomImages: [
+      "/villa-images/Mint Villa-19.webp",
+      "/villa-images/Mint Villa-20.webp",
+      "/villa-images/Mint Villa-22.webp",
     ],
   },
 ];
@@ -154,14 +188,14 @@ function MintVillaClient() {
         {rooms.map((room) => (
           <div className="room-row py-5 sm:py-10" key={room.title}>
             <h2 className="font-headingFont text-3xl text-llbrown mb-5">
-              {room.title} / {room.bed} bed{" "}
+              {room.title} {room.bed ? ` • ${room.bed} bed` : ""}{" "}
               {room.additions ? `• ${room.additions}` : ""}
             </h2>
 
-            <div className="sm:grid gap-5 sm:grid-cols-3">
+            <div className="sm:grid gap-5 sm:grid-cols-3 items-center">
               {room.roomImages.map((roomImage, index) => (
                 <ExportedImage
-                  className="object-cover mb-5 h-full object-center"
+                  className="object-cover mb-5 object-center h-full "
                   key={`room-${index}`}
                   alt="room-image"
                   width={900}
@@ -174,7 +208,7 @@ function MintVillaClient() {
         ))}
       </section>
 
-      <section className="features-section max-w-screen-lg m-auto px-5 sm:flex sm:justify-between">
+      {/* <section className="features-section max-w-screen-lg m-auto px-5 sm:flex sm:justify-between">
         {features.map((feature, index) => (
           <div
             className="feature-card py-10 md:py-14 xl:py-20 max-w-[400px] mb-8"
@@ -197,7 +231,7 @@ function MintVillaClient() {
             </p>
           </div>
         ))}
-      </section>
+      </section> */}
 
       <section>
         <div className="max-w-screen-xl m-auto">

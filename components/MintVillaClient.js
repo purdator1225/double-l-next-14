@@ -6,6 +6,7 @@ import { amenities } from "@/data/amenities";
 import { useState } from "react";
 
 import ExportedImage from "next-image-export-optimizer";
+import Link from "next/link";
 
 const rooms = [
   {
@@ -233,7 +234,53 @@ function MintVillaClient() {
         ))}
       </section> */}
 
-      <section>
+      {/* Move promo-section here, above FAQ */}
+      <section className="promo-section md:min-h-[70vh] relative  ">
+        <ExportedImage
+          className="md:top-[5%] w-[12%] aspect-square object-cover hidden md:block absolute"
+          alt="balinese"
+          width={300}
+          height={300}
+          src={"/villa-images/Mint Villa-7.webp"}
+        />
+        <ExportedImage
+          className="hidden w-[15%] aspect-square object-cover md:bottom-0 md:left-[5%] md:block absolute"
+          alt="zen-garden"
+          width={300}
+          height={300}
+          src={"/villa-images/Mint Villa-1.webp"}
+        />
+        <div className="px-5 py-10  md:py-0 md:absolute max-w-[500px] top-[50%] md:translate-y-[-50%] md:left-[50%] md:translate-x-[-50%] flex flex-col gap-14 items-center">
+          <h1 className="text-6xl text-center font-headingFont ">
+            Early Bird & Last-Minute Deals!
+          </h1>
+          <h3 className="font-bodyFont text-center">
+            Indulge in a private getaway with exclusive experience like a
+            private pool and a fully equipped kitchen. Book early for{" "}
+            <span className="text-4xl font-headingFont">5% off</span>, or seize
+            the moment with limited-time last-minute savings.
+          </h3>
+          <button className="bg-llbrown text-white text-2xl font-bodyFont px-7 py-4">
+            <Link href="/book">Secure Your Stay Today!</Link>
+          </button>
+        </div>
+        <ExportedImage
+          className="w-[10%] top-[3%] hidden md:right-0 aspect-square object-cover md:block absolute"
+          alt="pantry"
+          width={300}
+          height={300}
+          src={"/villa-images/Mint Villa-14.webp"}
+        />
+        <ExportedImage
+          className="w-[20%] md:bottom-[5%] md:right-[2%] hidden md:block absolute"
+          alt="indoor-jacuzzi"
+          width={300}
+          height={300}
+          src={"/villa-images/Mint Villa-23.webp"}
+        />
+      </section>
+      {/* FAQ section follows */}
+      <section className="pt-16">
         <div className="max-w-screen-xl m-auto">
           <div className="border-solid border-[1px] gap-5 border-black flex justify-center rounded-full items-center mb-5  w-fit py-1 px-8">
             <ExportedImage

@@ -7,7 +7,7 @@ import ExportedImage from "next-image-export-optimizer";
 import { motion } from "framer-motion";
 import VillaSlider from "@/components/VillaSlider";
 import MediaSlider from "@/components/MediaSlider";
-import BeSearchForm from "../components/be-forms/be-search-form";
+
 import Link from "next/link";
 import FeaturedIn from "@/components/FeaturedIn";
 
@@ -88,8 +88,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <BeSearchForm />
 
       <section className="about-us px-5  py-10 sm:py-14 xl:py-20">
         <div className="grid gap-y-10 md:gap-10 xl:gap-x-20 md:grid-cols-3 max-w-screen-xl m-auto">

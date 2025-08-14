@@ -15,7 +15,6 @@ function Navbar() {
 
      { href: '/', label: 'Home' },
     { href: '#villas', label: 'Our Villas' },
-    { href: '/book', label: 'Book Now' },
   ];
 
   // Toggle hamburger menu visibility

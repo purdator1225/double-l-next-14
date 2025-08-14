@@ -246,7 +246,7 @@ export default function Home() {
           </h3>
 
           <button className="bg-llbrown text-white text-2xl font-bodyFont px-7 py-4">
-            <Link href="/book">Secure Your Stay Today!</Link>
+            <a href="https://book-directonline.com/properties/MintVillaDIRECT" target="_blank" rel="noopener noreferrer">Secure Your Stay Today!</a>
           </button>
         </div>
 

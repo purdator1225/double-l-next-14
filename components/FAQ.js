@@ -153,7 +153,7 @@ function FAQ() {
       Kindly check the link below for all updated rates!
       <br />
 
-      <Link className="underline text-llbrown" href='/booking'>Available Bookings</Link>
+      <a className="underline text-llbrown" href="https://book-directonline.com/properties/MintVillaDIRECT" target="_blank" rel="noopener noreferrer">Available Bookings</a>
     </p>
   </details>
 

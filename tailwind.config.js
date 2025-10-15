@@ -25,6 +25,8 @@ module.exports = {
         "mint-hero": "url('/villa-images/Mint Villa-21.webp')",
         "booking-hero": "url('/villa-images/Mint Villa-11.webp')",
         "salt-hero": "url('/villa-images/salt-villa/salt_villa_5.jpg')",
+        "shinju-hero":
+          "url('/villa-images/shinju-villa/shinju-villa-exterior-2.jpeg')",
       },
     },
   },
